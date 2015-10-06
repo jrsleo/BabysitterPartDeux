@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		175A85441BC44B6000C13B31 /* BabysitterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A85431BC44B6000C13B31 /* BabysitterTest.swift */; };
+		175A854B1BC4595200C13B31 /* Babysitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175A854A1BC4595200C13B31 /* Babysitter.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		175A85401BC44B6000C13B31 /* BabysitterTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BabysitterTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		175A85431BC44B6000C13B31 /* BabysitterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabysitterTest.swift; sourceTree = "<group>"; };
 		175A85451BC44B6000C13B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		175A854A1BC4595200C13B31 /* Babysitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Babysitter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +32,7 @@
 		175A85351BC44B5100C13B31 = {
 			isa = PBXGroup;
 			children = (
+				175A85491BC4594500C13B31 /* Babysitter */,
 				175A85421BC44B6000C13B31 /* BabysitterTest */,
 				175A85411BC44B6000C13B31 /* Products */,
 			);
@@ -50,6 +53,14 @@
 				175A85451BC44B6000C13B31 /* Info.plist */,
 			);
 			path = BabysitterTest;
+			sourceTree = "<group>";
+		};
+		175A85491BC4594500C13B31 /* Babysitter */ = {
+			isa = PBXGroup;
+			children = (
+				175A854A1BC4595200C13B31 /* Babysitter.swift */,
+			);
+			name = Babysitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175A854B1BC4595200C13B31 /* Babysitter.swift in Sources */,
 				175A85441BC44B6000C13B31 /* BabysitterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
