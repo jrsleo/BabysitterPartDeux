@@ -2,6 +2,24 @@ import Foundation
 
 public class BabySitter {
     public func calculatePay (startTime: Int, jobDuration: Int) -> Int {
-        return 12 * jobDuration;
+        let bedTime = 9 // bedtime is assumed to always be 9 PM
+        var pay = 0
+        
+        if (startTime + jobDuration) <= bedTime {
+            pay = calculateDayTimeRate(jobDuration)
+        }
+        else if (startTime + jobDuration) <= 12 {
+            pay = calculateNightTimeRate(jobDuration)
+        }
+        
+        return pay
+    }
+    
+    private func calculateDayTimeRate (jobDuration: Int) -> Int{
+        return jobDuration * 12
+    }
+    
+    private func calculateNightTimeRate (jobDuration: Int) -> Int {
+        return jobDuration * 8
     }
 }
