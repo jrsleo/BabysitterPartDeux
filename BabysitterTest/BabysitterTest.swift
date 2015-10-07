@@ -31,6 +31,11 @@ class BabysitterTest: XCTestCase {
         XCTAssertEqual(60, babysitter.calculatePay(6, jobDuration: 6))
     }
     
+    func testWhenBabysitterStartsBetweenBedtimeAndMidnightAndLeavesAfterMidnightThenTheyArePaidTheSumOfTheNightTimeRatePlusTheEarlyMorningRate() {
+        XCTAssertEqual(40, babysitter.calculatePay(9, jobDuration: 4))
+        XCTAssertEqual(80, babysitter.calculatePay(10, jobDuration: 6))
+    }
+    
 /*
 Background
 ----------

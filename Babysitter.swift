@@ -5,7 +5,7 @@ public class BabySitter {
         let bedTime = 9 // bedtime is assumed to always be 9 PM
         var pay = 0
         
-        if startTime <= bedTime {
+        if startTime < bedTime {
             if startTime + jobDuration <= bedTime {
                 pay = calculateDayTimeRate(jobDuration)
             }
@@ -14,8 +14,13 @@ public class BabySitter {
             }
             
         }
-        else if (startTime + jobDuration) <= 12 {
-            pay = calculateNightTimeRate(jobDuration)
+        else if (bedTime <= startTime) && (startTime < 12) {
+            if startTime + jobDuration <= 12 {
+                pay = calculateNightTimeRate(jobDuration)
+            }
+            else if (startTime + jobDuration <= 16) {
+                pay = calculateNightTimeRate(12 - startTime) + calculateEarlyMorningTimeRate(jobDuration - (12 - startTime))
+            }
         }
         else {
             pay = calculateEarlyMorningTimeRate(jobDuration)
