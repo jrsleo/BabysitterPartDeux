@@ -14,7 +14,9 @@ public class BabySitter {
             else if startTime + jobDuration <= midnight {
                 pay = calculateDayTimeRate(bedTime - startTime) + calculateNightTimeRate(jobDuration - (bedTime - startTime))
             }
-            
+            else {
+                pay = calculateDayTimeRate(bedTime - startTime) + calculateNightTimeRate(midnight - bedTime) + calculateEarlyMorningTimeRate(jobDuration - (midnight - bedTime) - (bedTime - startTime))
+            }
         }
         else if (bedTime <= startTime) && (startTime < midnight) {
             if startTime + jobDuration <= midnight {
@@ -31,15 +33,15 @@ public class BabySitter {
         return pay
     }
     
-    private func calculateDayTimeRate (jobDuration: Int) -> Int{
-        return jobDuration * 12
+    private func calculateDayTimeRate (timePeriod: Int) -> Int{
+        return timePeriod * 12
     }
     
-    private func calculateNightTimeRate (jobDuration: Int) -> Int {
-        return jobDuration * 8
+    private func calculateNightTimeRate (timePeriod: Int) -> Int {
+        return timePeriod * 8
     }
     
-    private func calculateEarlyMorningTimeRate (jobDuration: Int) -> Int {
-        return jobDuration * 16
+    private func calculateEarlyMorningTimeRate (timePeriod: Int) -> Int {
+        return timePeriod * 16
     }
 }
