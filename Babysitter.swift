@@ -11,6 +11,9 @@ public class BabySitter {
         else if (startTime + jobDuration) <= 12 {
             pay = calculateNightTimeRate(jobDuration)
         }
+        else {
+            pay = calculateEarlyMorningTimeRate(jobDuration)
+        }
         
         return pay
     }
@@ -21,5 +24,9 @@ public class BabySitter {
     
     private func calculateNightTimeRate (jobDuration: Int) -> Int {
         return jobDuration * 8
+    }
+    
+    private func calculateEarlyMorningTimeRate (jobDuration: Int) -> Int {
+        return jobDuration * 16
     }
 }
